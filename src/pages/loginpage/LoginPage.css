@@ -150,3 +150,7 @@ input[type="password"]::placeholder {
     opacity: 0.7;
     cursor: not-allowed;
 }
+
+.form-group {
+    margin-bottom: 15px;
+}
