@@ -1,0 +1,239 @@
+.view-details-voucher-container {
+    max-width: 1400px;
+    margin: 30px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+.view-details-voucher-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.view-details-voucher-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+.view-details-action-buttons-header {
+    display: flex;
+    gap: 12px;
+}
+
+.view-details-btn-go-back,
+.view-details-btn-print {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.view-details-btn-go-back {
+    background-color: #5b73e8;
+    color: white;
+}
+
+.view-details-btn-go-back:hover {
+    background-color: #4a5fc1;
+}
+
+.view-details-btn-print {
+    background-color: #34c38f;
+    color: white;
+}
+
+.view-details-btn-print:hover {
+    background-color: #2ba876;
+}
+
+/* Company Section */
+.view-details-company-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.view-details-company-logo img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.view-details-company-info h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 8px 0;
+}
+
+.view-details-company-info p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+}
+
+/* Service Info */
+.view-details-service-info {
+    margin-bottom: 20px;
+}
+
+.view-details-info-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.view-details-info-item {
+    font-size: 14px;
+    color: #555;
+}
+
+.view-details-info-item strong {
+    color: #333;
+    margin-right: 5px;
+}
+
+.view-details-info-item.view-details-full-width {
+    grid-column: 1 / 3;
+}
+
+/* Tables */
+.view-details-info-table,
+.view-details-detail-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+.view-details-info-table {
+    background-color: #5b73e8;
+    color: white;
+}
+
+.view-details-info-table thead th {
+    padding: 12px;
+    text-align: center;
+    font-weight: 600;
+    background-color: #5b73e8;
+}
+
+.view-details-info-table tbody td {
+    padding: 12px;
+    text-align: center;
+    background-color: white;
+    color: #333;
+}
+
+.view-details-detail-table {
+    border: 1px solid #e0e0e0;
+}
+
+.view-details-detail-table thead {
+    background-color: #5b73e8;
+    color: white;
+}
+
+.view-details-detail-table thead th {
+    padding: 12px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.view-details-detail-table tbody td {
+    padding: 12px;
+    border-bottom: 1px solid #e0e0e0;
+    color: #555;
+    font-size: 13px;
+}
+
+.view-details-detail-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.view-details-detail-table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* Section Headings */
+.view-details-section-heading {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin: 25px 0 15px 0;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+/* Loading & Error States */
+.view-details-loading-container,
+.view-details-error-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    gap: 20px;
+}
+
+.view-details-loading-container p,
+.view-details-error-container p {
+    font-size: 18px;
+    color: #666;
+}
+
+/* Print Styles */
+@media print {
+
+    .view-details-voucher-header .view-details-action-buttons-header,
+    header {
+        display: none !important;
+    }
+
+    .view-details-voucher-container {
+        box-shadow: none;
+        padding: 0;
+    }
+
+    body {
+        background: white;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .view-details-info-row {
+        grid-template-columns: 1fr;
+    }
+
+    .view-details-voucher-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .view-details-detail-table {
+        font-size: 11px;
+    }
+
+    .view-details-detail-table thead th,
+    .view-details-detail-table tbody td {
+        padding: 8px;
+    }
+}

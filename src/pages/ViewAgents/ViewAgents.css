@@ -1,0 +1,286 @@
+/* Agent Management Styles */
+
+.agents-admin-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.agents-page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.agents-page-header h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0;
+}
+
+.agents-btn-primary {
+    padding: 12px 24px;
+    background: #1976d2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.agents-btn-primary:hover {
+    background: #1565c0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(25, 118, 210, 0.3);
+}
+
+.agents-btn-primary:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.agents-btn-secondary {
+    padding: 12px 24px;
+    background: #f5f5f5;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.agents-btn-secondary:hover {
+    background: #e0e0e0;
+}
+
+.agents-table-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.agents-table-wrapper {
+    overflow-x: auto;
+}
+
+.agents-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.agents-table thead {
+    background: #f8f9fa;
+}
+
+.agents-table thead th {
+    padding: 16px 20px;
+    text-align: left;
+    font-size: 13px;
+    font-weight: 600;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.agents-table tbody td {
+    padding: 16px 20px;
+    color: #333;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.agents-table tbody tr:hover {
+    background: #f8f9fa;
+}
+
+.agents-no-data {
+    text-align: center;
+    padding: 60px 20px !important;
+}
+
+.agents-empty-state p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.agents-empty-state small {
+    font-size: 14px;
+    color: #999;
+}
+
+/* Action Buttons Group */
+.agents-action-buttons-group {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.agents-action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.agents-action-btn .agents-btn-text {
+    display: inline;
+}
+
+.agents-action-btn.agents-excel-btn {
+    background: #4caf50;
+    color: white;
+}
+
+.agents-action-btn.agents-excel-btn:hover {
+    background: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 6px rgba(76, 175, 80, 0.3);
+}
+
+.agents-action-btn.agents-update-btn {
+    background: #ff9800;
+    color: white;
+}
+
+.agents-action-btn.agents-update-btn:hover {
+    background: #f57c00;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 6px rgba(255, 152, 0, 0.3);
+}
+
+/* Modal Styles */
+.agents-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.agents-modal-content {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 500px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.agents-modal-content h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0 0 24px 0;
+}
+
+.agents-form-group {
+    margin-bottom: 20px;
+}
+
+.agents-form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.agents-form-group input[type="text"],
+.agents-form-group input[type="password"],
+.agents-form-group input[type="file"] {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.2s;
+    box-sizing: border-box;
+}
+
+.agents-form-group input:focus {
+    outline: none;
+    border-color: #1976d2;
+    box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.1);
+}
+
+.agents-form-group small {
+    display: block;
+    margin-top: 4px;
+}
+
+.agents-success-text {
+    color: #4caf50;
+    font-size: 14px;
+    margin-top: 8px;
+    font-weight: 500;
+}
+
+.agents-modal-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 30px;
+    justify-content: flex-end;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .agents-page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .agents-modal-content {
+        padding: 20px;
+    }
+
+    .agents-modal-actions {
+        flex-direction: column;
+    }
+
+    .agents-modal-actions button {
+        width: 100%;
+    }
+
+    .agents-action-buttons-group {
+        flex-direction: column;
+    }
+
+    .agents-action-btn .agents-btn-text {
+        display: none;
+    }
+
+    .agents-action-btn {
+        padding: 8px;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .agents-action-btn .agents-btn-text {
+        display: none;
+    }
+}
