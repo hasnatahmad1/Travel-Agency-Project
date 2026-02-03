@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router'
 import { LoginPage } from './pages/loginpage/LoginPage'
 import { HomePage } from './pages/HomePage/HomePage';
-import { ViewAgents } from './pages/ViewAgents/viewagents';
+import { ViewAgents } from './pages/ViewAgents/ViewAgents';
 import { CreateNewPage } from './pages/CreateNewPage/CreateNewPage';
 import { ViewDetails } from './pages/ViewDetails/ViewDetails';
 import './App.css'
