@@ -22,12 +22,13 @@ export function LoginPage() {
         try {
             setLoading(true);
 
-            const response = await axios.post('http://127.0.0.1:5000/login/', {
+            const response = await axios.post('https://yousef-frizzliest-myah.ngrok-free.dev/login/', {
                 username: userName,
                 password: userPassword
             }, {
                 headers: {
                     "Content-Type": "application/json",
+                    'ngrok-skip-browser-warning': 'true',
                 }
             });
 

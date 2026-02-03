@@ -33,8 +33,8 @@ export function ViewAgents() {
     const fetchAgents = async () => {
         try {
             setLoading(true);
-            const response = await axios.get('http://127.0.0.1:5000/api/admin/agents/', {
-                headers: { 'Authorization': `Bearer ${token}` }
+            const response = await axios.get('https://yousef-frizzliest-myah.ngrok-free.dev/api/admin/agents/', {
+                headers: { 'Authorization': `Bearer ${token}`, 'ngrok-skip-browser-warning': 'true', }
             });
             setAgents(response.data);
             setLoading(false);
@@ -102,7 +102,7 @@ export function ViewAgents() {
 
         try {
             const response = await axios.post(
-                'http://127.0.0.1:5000/api/admin/agents/create/',
+                'https://yousef-frizzliest-myah.ngrok-free.dev/api/admin/agents/create/',
                 {
                     username: newUsername,
                     password: newPassword,
@@ -111,7 +111,8 @@ export function ViewAgents() {
                 {
                     headers: {
                         'Authorization': `Bearer ${token}`,
-                        'Content-Type': 'application/json'
+                        'Content-Type': 'application/json',
+                        'ngrok-skip-browser-warning': 'true',
                     }
                 }
             );
@@ -172,12 +173,13 @@ export function ViewAgents() {
             }
 
             const response = await axios.patch(
-                `http://127.0.0.1:5000/api/admin/agents/${selectedAgent.id}/update/`,
+                `https://yousef-frizzliest-myah.ngrok-free.dev/api/admin/agents/${selectedAgent.id}/update/`,
                 updateData,
                 {
                     headers: {
                         'Authorization': `Bearer ${token}`,
-                        'Content-Type': 'application/json'
+                        'Content-Type': 'application/json',
+                        'ngrok-skip-browser-warning': 'true',
                     }
                 }
             );
@@ -217,7 +219,7 @@ export function ViewAgents() {
             }
 
             const response = await axios.post(
-                `http://127.0.0.1:5000/api/admin/agents/${agentId}/mautamers/`,
+                `https://yousef-frizzliest-myah.ngrok-free.dev/api/admin/agents/${agentId}/mautamers/`,
                 {
                     mautamers: mautamers,
                     replace_existing: false
@@ -225,7 +227,8 @@ export function ViewAgents() {
                 {
                     headers: {
                         'Authorization': `Bearer ${token}`,
-                        'Content-Type': 'application/json'
+                        'Content-Type': 'application/json',
+                        'ngrok-skip-browser-warning': 'true',
                     }
                 }
             );

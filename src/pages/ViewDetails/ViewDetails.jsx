@@ -27,10 +27,11 @@ export function ViewDetails() {
     const fetchVoucherDetails = async () => {
         try {
             setLoading(true);
-            const response = await axios.get(`http://127.0.0.1:5000/vouchers/${id}/`, {
+            const response = await axios.get(`https://yousef-frizzliest-myah.ngrok-free.dev/vouchers/${id}/`, {
                 headers: {
                     'Authorization': `Bearer ${token}`,
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    'ngrok-skip-browser-warning': 'true',
                 }
             });
 

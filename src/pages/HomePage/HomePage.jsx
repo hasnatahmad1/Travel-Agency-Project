@@ -36,10 +36,11 @@ export function HomePage() {
             setLoading(true);
             setError(null);
 
-            const response = await axios.get('http://127.0.0.1:5000/api/admin/vouchers/', {
+            const response = await axios.get('https://yousef-frizzliest-myah.ngrok-free.dev/api/admin/vouchers/', {
                 headers: {
                     'Authorization': `Bearer ${token}`,
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    'ngrok-skip-browser-warning': 'true',
                 }
             });
 
@@ -77,11 +78,12 @@ export function HomePage() {
         if (window.confirm('Are you sure you want to approve this voucher?')) {
             try {
                 await axios.patch(
-                    `http://127.0.0.1:5000/api/admin/vouchers/${voucherId}/status/`,
+                    `https://yousef-frizzliest-myah.ngrok-free.dev/api/admin/vouchers/${voucherId}/status/`,
                     { status: 'approved' },
                     {
                         headers: {
-                            'Authorization': `Bearer ${token}`
+                            'Authorization': `Bearer ${token}`,
+                            'ngrok-skip-browser-warning': 'true',
                         }
                     }
                 );
@@ -100,11 +102,12 @@ export function HomePage() {
         if (window.confirm('Are you sure you want to reject this voucher?')) {
             try {
                 await axios.patch(
-                    `http://127.0.0.1:5000/api/admin/vouchers/${voucherId}/status/`,
+                    `https://yousef-frizzliest-myah.ngrok-free.dev/api/admin/vouchers/${voucherId}/status/`,
                     { status: 'rejected' },
                     {
                         headers: {
-                            'Authorization': `Bearer ${token}`
+                            'Authorization': `Bearer ${token}`,
+                            'ngrok-skip-browser-warning': 'true',
                         }
                     }
                 );
@@ -150,10 +153,11 @@ export function HomePage() {
     const fetchVouchers = async () => {
         try {
             setLoading(true);
-            const response = await axios.get('http://127.0.0.1:5000/vouchers/', {
+            const response = await axios.get('https://yousef-frizzliest-myah.ngrok-free.dev/vouchers/', {
                 headers: {
                     'Authorization': `Bearer ${token}`,
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    'ngrok-skip-browser-warning': 'true',
                 }
             });
 
@@ -175,9 +179,10 @@ export function HomePage() {
     const handleDeleteVoucher = async (voucherId) => {
         if (window.confirm('Are you sure you want to delete this voucher?')) {
             try {
-                await axios.delete(`http://127.0.0.1:5000/vouchers/${voucherId}/`, {
+                await axios.delete(`https://yousef-frizzliest-myah.ngrok-free.dev/vouchers/${voucherId}/`, {
                     headers: {
-                        'Authorization': `Bearer ${token}`
+                        'Authorization': `Bearer ${token}`,
+                        'ngrok-skip-browser-warning': 'true',
                     }
                 });
 

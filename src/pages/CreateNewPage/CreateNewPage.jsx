@@ -74,10 +74,11 @@ export function CreateNewPage() {
         try {
             setLoadingMautamers(true);
 
-            const response = await axios.get('http://127.0.0.1:5000/api/agent/mautamers/', {
+            const response = await axios.get('https://yousef-frizzliest-myah.ngrok-free.dev/api/agent/mautamers/', {
                 headers: {
                     'Authorization': `Bearer ${token}`,
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    'ngrok-skip-browser-warning': 'true',
                 }
             });
 
@@ -237,12 +238,13 @@ export function CreateNewPage() {
             console.log('Submitting voucher:', voucherData);
 
             const response = await axios.post(
-                'http://127.0.0.1:5000/vouchers/',
+                'https://yousef-frizzliest-myah.ngrok-free.dev/vouchers/',
                 voucherData,
                 {
                     headers: {
                         'Authorization': `Bearer ${token}`,
-                        'Content-Type': 'application/json'
+                        'Content-Type': 'application/json',
+                        'ngrok-skip-browser-warning': 'true',
                     }
                 }
             );
