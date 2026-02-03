@@ -1,3 +1,58 @@
+/* Global/Base Styles - Add this to your index.css or global.css */
+/* Import this once at the application level, not in component files */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: Arial;
+    font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Global Button Reset */
+button {
+    font-family: inherit;
+}
+
+/* Global Form Element Reset */
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+/* Remove default list styles */
+ul,
+ol {
+    list-style: none;
+}
+
+/* Link Reset */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Image Responsiveness */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Table Reset */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
 }

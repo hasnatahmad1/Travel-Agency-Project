@@ -2,6 +2,8 @@ import { Header } from "../../components/Header";
 import { useNavigate } from "react-router";
 import { useEffect, useState } from "react";
 import axios from 'axios';
+
+// Component-specific styles (general styles in global.css)
 import './CreateNewPage.css'
 
 export function CreateNewPage() {
